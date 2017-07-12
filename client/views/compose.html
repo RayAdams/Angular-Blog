@@ -1,0 +1,27 @@
+<form class="form-group" name="myform">
+    <div class="row">
+        <div class="col-sm-2 col-sm-offset-2">
+            <select id="user-selector" class="btn-inverse form-control" ng-model="selectedUser" ng-required="true">
+                <option value=''>Select User:</option>
+                <option ng-repeat="user in users" value="{{user.id}}"> {{user.firstname}} </option>
+            </select>
+            <select id="category-selector" class="btn-inverse form-control" ng-model="selectedCategory" ng-required="true">
+                <option value=''>Select Category:</option>
+                <option ng-repeat="c in categories" value="{{c.id}}"> {{c.name}} </option>
+            </select>
+        </div>
+        <div class="col-sm-6 text text-center">
+                <input type="text" ng-model="titleToPost" id='title-field' class="form-control text" placeholder="Title">
+            </div>
+        <div class="col-sm-6 text">
+            <textarea ng-model="contentToPost" ng-required="true" id='blog-field' rows="10" cols="70" class="form-control text" placeholder="Create New Post"></textarea>
+        </div>
+
+        <div>
+            <div class="col-xs-2">
+                <button class="btn btn-info btn-lg" ng-click="myform.$valid && createPost()">POST</button>
+            </div>
+        </div>
+
+    </div>
+</form>

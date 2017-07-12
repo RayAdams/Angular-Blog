@@ -1,0 +1,33 @@
+{
+  "name": "angular-blog",
+  "version": "1.0.0",
+  "description": "## Info * You will be creating a blog site using Angular, Express, and MySQL * You will be writing an express server and API code, so you will need to install express, body-parser, and mysql into your package.json file * You will be using factories, $resource, and html5Mode",
+  "main": "server/index.js",
+  "scripts": {
+    "test": "source .variables && nodemon",
+    "start": "node server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RayAdams/Angular-Blog.git"
+  },
+  "author": "Rachael",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RayAdams/Angular-Blog/issues"
+  },
+  "homepage": "https://github.com/RayAdams/Angular-Blog#readme",
+  "dependencies": {
+    "bcrypt": "^1.0.2",
+    "body-parser": "^1.17.2",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.3",
+    "express-mysql-session": "^1.2.1",
+    "express-session": "^1.15.3",
+    "mysql": "^2.13.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "prerender-node": "^2.7.2"
+  }
+}

@@ -1,0 +1,21 @@
+<div class="container">
+<nav class="navbar navbar-default navbar-inverse navbar-right">
+    <div class="container-fluid">
+        <button type="button" class="btn btn-default navbar-btn"><a href="/login">Login</a></button>
+        <button type="button" class="btn btn-default navbar-btn"><a href="/compose">Write</a></button>
+        <button type="button" class="btn btn-default navbar-btn"><a href="/logout">Logout</a></button>
+    </div>
+</nav>
+</div>
+
+<div class="container">
+    <div class="container" id="post-list">
+        <h1>{{ post.firstname }} {{ post.lastname }}</h1>
+        <p> {{ post.title }}</p>
+        <p>{{ post.content }}</p>
+        <h5>{{ post.datetime | date: 'medium'}}</h5>
+        <h6>Category: {{ post.catname }}</h6>
+        <button class="edit-btn btn btn-primary btn-xs"><a ng-href="/{{ post.id }}/update"><span id="btn-text"><i class="glyphicon glyphicon-pencil edit-btn" aria-hidden="true"></i>Edit</span></a></button>
+        <button ng-click="deletePost()" class="btn btn-danger btn-xs delete-btn"><span id="btn-text"><i class="fa fa-trash-o" aria-hidden="true"></i>Delete</span></button>
+    </div>
+</div>

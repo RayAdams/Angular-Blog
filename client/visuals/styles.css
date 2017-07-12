@@ -1,0 +1,63 @@
+.jumbotron {
+   text-align: center;
+   color: #f4f4f4;
+   background-color: #373737;
+}
+
+#textbox {
+    display: inline-block
+}
+
+.text {
+    position: center;
+    vertical-align: middle;
+    text-align: center;
+    padding-left: 5em;
+}
+
+div .container {
+    background-color: gainsboro;
+}
+
+#user-selector{
+    background-color: #373737;
+    color: #f4f4f4;
+}
+
+#post-btn {
+    background-color: #373737;
+    color: white;
+}
+
+#post-list {
+    color: #373737;
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid #373737;
+}
+
+body {
+    background-color: #FFF5EE;
+    font-family: Garamond, Helvetica, sans-serif;
+}
+
+img {
+    padding-left: 4px;
+}
+
+.delete-btn {
+    float: right;
+}
+
+.btn {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#btn-text {
+    color: white;
+}
+
+textarea {
+    white-space: pre-wrap;
+}

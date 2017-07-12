@@ -1,0 +1,20 @@
+<div class="container">
+<nav class="navbar navbar-default navbar-inverse navbar-right">
+    <div class="container-fluid">
+        <button type="button" class="btn btn-default navbar-btn"><a href="/login">Login</a></button>
+        <button type="button" class="btn btn-default navbar-btn"><a href="/compose">Write</a></button>
+        <button type="button" class="btn btn-default navbar-btn"><a href="/logout">Logout</a></button>
+    </div>
+</nav>
+</div>
+
+<div class="container">
+    <div class="container" id="post-list" ng-repeat="post in posts">
+        <h1>{{ post.firstname }} {{ post.lastname }}</h1>
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.content }}</p>
+        <h5>{{ post.datetime | date: 'medium'}}</h5>
+        <h6>Category: {{ post.catname }}</h6>
+        <button id='post-btn' class="btn btn-primary btn-xs view-btn" type='submit'><a ng-href="/{{ post.id }}"><i id="btn-text" class="glyphicon glyphicon-zoom-in" aria-hidden="true"></i>VIEW</a></button>
+    </div>
+</div>

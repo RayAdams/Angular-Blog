@@ -1,0 +1,26 @@
+<div class="container">
+<nav class="navbar navbar-default navbar-inverse navbar-right">
+    <div class="container-fluid">
+        <button type="button" class="btn btn-default navbar-btn"><a href="/logout">Logout</a></button>
+    </div>
+</nav>
+</div>
+
+
+
+
+<div class="container">
+    <div class="container blog-area" id="post-list">
+        <h1>{{ post.firstname }}</h1>
+        <input ng-model="titleToPost" ng-required="true" id='title-field' type="text" class="form-control text" placeholder="{{ post.title }}"></input>
+        <textarea ng-model="contentToPost" ng-required="true" id='blog-field' rows="10" cols="70" class="form-control text" placeholder="{{ post.content }}"></textarea>
+        <h5>{{ post.datetime | date: 'medium'}}</h5>
+        <div class="col-2-sm">
+        <select id="category-selector" class="btn-inverse" ng-model="selectedCategory" ng-required="true">
+            <option value=''>Select Category:</option>
+            <option ng-repeat="c in category" value="{{c.id}}"> {{c.name}} </option>
+        </select>
+        <button ng-click="updatePost()" class="btn btn-sm btn-primary"><span id="btn-text">Submit</span></button>
+        </div>
+    </div>
+</div>
